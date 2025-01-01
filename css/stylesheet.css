@@ -4,7 +4,7 @@
 :root {
    /* --background: #ffff; */
    --background: #e0e0d2;
-   --text: #505042;
+   --text: #503242;
    --main-accenn: #949479;
    --secondary-accenn: #72725d;
    --pre-hover: #b6b695;
@@ -14,6 +14,8 @@
 * {
    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+   font-weight: 600;
 }
 
 html,
@@ -23,81 +25,67 @@ body {
    background-color: var(--background);
 }
 
-header {
-   display: flex;
-   justify-content: space-around;
+aside {
    background-color: var(--main-accenn);
-   color: var(--text);
-   align-items: center;
-   align-content: center;
-   text-align: left;
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   z-index: 500;
-   padding: 1rem 0;
-}
-
-.left-head {
-   display: flex;
-   align-items: center;
-   gap: 1rem;
-   color: #1c1c1e;
-}
-
-.left-text h2,
-/* .left-text h3, */
-/* .left-text h4, */
-.left-text h5,
-.left-text h6 {
-   margin: 0;
-   font-weight: bold;
-   padding: 0.2rem 0 0.2rem 0;
-}
-
-.icon-profile {
-   height: 5.5rem;
-   border-radius: 1rem;
-}
-
-.right-head {
-   display: flex;
-   gap: 1rem;
-   color: #1c1c1e;
-   align-items: center;
-   align-content: center;
+   padding: 3rem;
+   margin-right: 5rem;
+   height: 100%;
    text-align: center;
+   align-items: center;
+   /* align-content: center; */
+   position: fixed;
+   z-index: 100;
+   color: var(--text);
+   box-shadow: 0.5rem 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile h3 {
+   margin-top: 0.2rem;
+}
+.inner-profile {
+   background-color: var(--text);
+   padding: 0.3rem;
+   border-radius: 2.2rem;
+   box-shadow: 0 8px 4px rgba(0, 0, 0, 0.4);
+}
+
+aside img {
+   height: 240px;
+   border-radius: 2rem;
+}
+
+aside nav,
+button {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   align-content: center;
+   color: var(--text);
+   gap: 0.5rem;
 }
 
 button {
-   padding: 0.5rem 1rem;
-   border: none;
-   border-radius: 1rem;
    background-color: var(--main-accenn);
-   /* color: var(--background); */
-   cursor: pointer;
-   transition: background-color 0.5s ease;
+   border: 1px solid var(--text);
+   padding: 1rem;
+   border-radius: 1rem;
+   transition: all 0.3s ease;
 }
 
+a {
+   color: var(--text);
+   text-decoration: none;
+}
 button:hover {
-   background-color: var(--background);
+   scale: 1.1;
+   /* border: none; */
+   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+   background-color: var(--hover);
+   color: var(--hover);
 }
 
-@media only screen and (max-width: 688px) {
-   header {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      gap: 2rem;
-   }
-
-   .left-head {
-      display: flex;
-      flex-direction: column;
-   }
-
-   .right-head {
-      gap: 0.5rem;
-   }
+/* Body Profile Content started here */
+main {
+   align-self: center;
+   margin-left: 10rem;
 }
