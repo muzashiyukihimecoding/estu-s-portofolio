@@ -1,0 +1,103 @@
+/* Imported Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+   /* --background: #ffff; */
+   --background: #e0e0d2;
+   --text: #505042;
+   --main-accenn: #949479;
+   --secondary-accenn: #72725d;
+   --pre-hover: #b6b695;
+   --hover: #b6b695;
+}
+
+* {
+   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+   margin: 0;
+   padding: 0;
+   background-color: var(--background);
+}
+
+header {
+   display: flex;
+   justify-content: space-around;
+   background-color: var(--main-accenn);
+   color: var(--text);
+   align-items: center;
+   align-content: center;
+   text-align: left;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 500;
+   padding: 1rem 0;
+}
+
+.left-head {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   color: #1c1c1e;
+}
+
+.left-text h2,
+/* .left-text h3, */
+/* .left-text h4, */
+.left-text h5,
+.left-text h6 {
+   margin: 0;
+   font-weight: bold;
+   padding: 0.2rem 0 0.2rem 0;
+}
+
+.icon-profile {
+   height: 5.5rem;
+   border-radius: 1rem;
+}
+
+.right-head {
+   display: flex;
+   gap: 1rem;
+   color: #1c1c1e;
+   align-items: center;
+   align-content: center;
+   text-align: center;
+}
+
+button {
+   padding: 0.5rem 1rem;
+   border: none;
+   border-radius: 1rem;
+   background-color: var(--main-accenn);
+   /* color: var(--background); */
+   cursor: pointer;
+   transition: background-color 0.5s ease;
+}
+
+button:hover {
+   background-color: var(--background);
+}
+
+@media only screen and (max-width: 688px) {
+   header {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+   }
+
+   .left-head {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .right-head {
+      gap: 0.5rem;
+   }
+}
