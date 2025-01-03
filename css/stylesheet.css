@@ -1,91 +1,37 @@
-/* Imported Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
-:root {
-   /* --background: #ffff; */
-   --background: #e0e0d2;
-   --text: #503242;
-   --main-accenn: #949479;
-   --secondary-accenn: #72725d;
-   --pre-hover: #b6b695;
-   --hover: #b6b695;
-}
-
-* {
-   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-
-   font-weight: 600;
-}
+/* Import Fonts her */
 
 html,
 body {
-   margin: 0;
+   margin: 0 1rem;
    padding: 0;
-   background-color: var(--background);
-}
-
-aside {
-   background-color: var(--main-accenn);
-   padding: 3rem;
-   margin-right: 5rem;
-   height: 100%;
-   text-align: center;
    align-items: center;
-   /* align-content: center; */
-   position: fixed;
-   z-index: 100;
-   color: var(--text);
-   box-shadow: 0.5rem 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.profile h3 {
-   margin-top: 0.2rem;
-}
-.inner-profile {
-   background-color: var(--text);
-   padding: 0.3rem;
-   border-radius: 2.2rem;
-   box-shadow: 0 8px 4px rgba(0, 0, 0, 0.4);
+body {
+   /* display: flex !important; */
+   /* flex-direction: row-reverse; */
+   justify-content: space-between;
 }
 
-aside img {
-   height: 240px;
-   border-radius: 2rem;
-}
-
-aside nav,
-button {
-   display: flex;
-   flex-direction: column;
+nav {
+   position: fixed !important;
+   top: 0;
+   right: 0;
+   margin: 1rem 2rem 0 2rem;
+   padding: 0 2rem;
    align-items: center;
    align-content: center;
-   color: var(--text);
-   gap: 0.5rem;
+   text-align: center;
 }
 
-button {
-   background-color: var(--main-accenn);
-   border: 1px solid var(--text);
-   padding: 1rem;
-   border-radius: 1rem;
-   transition: all 0.3s ease;
-}
-
-a {
-   color: var(--text);
-   text-decoration: none;
-}
-button:hover {
-   scale: 1.1;
-   /* border: none; */
-   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
-   background-color: var(--hover);
-   color: var(--hover);
-}
-
-/* Body Profile Content started here */
 main {
-   align-self: center;
-   margin-left: 10rem;
+   display: flex column;
+   flex: 1;
+   margin: 2rem;
+   max-width: 600px;
+   /* gap: 10rem 0 0; */
+}
+
+main div {
+   margin: 14rem 0;
 }
