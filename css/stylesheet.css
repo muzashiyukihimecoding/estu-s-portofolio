@@ -1,10 +1,37 @@
 /* Import Fonts her */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+/* 
+<uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 900 */
+/* 
+.urbanist-<uniquifier > {
+   font-optical-sizing: auto;
+   font-weight: <weight>;
+   font-style: normal;
+} */
+
+/* Colour Inits */
+:root {
+   --background-grey: #f2f2f2;
+   --background-lightgrey: #e0e0e0;
+   --background-white: #ffffff;
+   --accenn-blue: #003366;
+   --accenn-purple: #4b0082;
+   --hover-blue: #007bff;
+   --hover-teal: #008080;
+   --text-grey: #333333;
+   /* Pastel Combinations */
+   --pastle-blue: #a0d7e7;
+   --pastle-yellow: #f8e9a1;
+}
 
 html,
 body {
    margin: 0 1rem;
    padding: 0;
    align-items: center;
+   font-family: "Urbanist", serif;
+   font-style: normal;
 }
 
 body {
@@ -15,13 +42,15 @@ body {
 
 nav {
    position: fixed !important;
+   height: 100%;
    top: 0;
    right: 0;
-   margin: 1rem 2rem 0 2rem;
+   margin: 0 2rem;
    padding: 0 2rem;
    align-items: center;
    align-content: center;
    text-align: center;
+   background-color: var(--background-lightgrey);
 }
 
 main {
@@ -29,9 +58,67 @@ main {
    flex: 1;
    margin: 2rem;
    max-width: 600px;
-   /* gap: 10rem 0 0; */
+   div {
+      margin: 14rem 0;
+   }
 }
 
-main div {
-   margin: 14rem 0;
+/* Toggle Buttons */
+.button {
+   background-color: var(--accenn-blue);
+   color: var(--background-white);
+   padding: 1rem 2rem;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   text-decoration: none;
+   transition: background-color 0.3s ease;
+}
+
+.button:hover {
+   background-color: var(--hover-blue);
+}
+
+/* Display Responsices */
+@media screen and (max-width: 768px) {
+   nav {
+      margin: 0;
+      padding: 1rem 0;
+      width: 100%;
+      height: 15%;
+      background-color: var(--accenn-blue);
+      color: var(--background-white);
+      display: flex column;
+      /* gap: 2rem; */
+      justify-content: space-between;
+   }
+
+   .upper-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: row;
+      padding: 0 1rem;
+      margin-bottom: 1rem;
+      img {
+         height: 100px;
+         border-radius: 24px;
+      }
+      h1,
+      h2 {
+         margin: 0.2rem;
+      }
+   }
+
+   .under-nav {
+      margin-top: 1.2rem;
+   }
+
+   .under-nav .button {
+      padding: 0.5rem;
+   }
+
+   main {
+      margin: 0;
+   }
 }
