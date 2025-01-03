@@ -14,6 +14,7 @@
 :root {
    --background-grey: #f2f2f2;
    --background-lightgrey: #e0e0e0;
+   --background-darkblue: #111827;
    --background-white: #ffffff;
    --accenn-blue: #003366;
    --accenn-purple: #4b0082;
@@ -27,25 +28,28 @@
 
 html,
 body {
-   margin: 0 1rem;
+   margin: 0;
    padding: 0;
    align-items: center;
    font-family: "Urbanist", serif;
    font-style: normal;
+   scroll-behavior: smooth;
 }
 
 body {
    /* display: flex !important; */
    /* flex-direction: row-reverse; */
    justify-content: space-between;
+   background-color: var(--accenn-blue);
+   /* color: white; */
 }
 
 nav {
-   position: fixed !important;
+   position: fixed;
    height: 100%;
    top: 0;
    right: 0;
-   margin: 0 2rem;
+   margin: 0 1em;
    padding: 0 2rem;
    align-items: center;
    align-content: center;
@@ -53,14 +57,33 @@ nav {
    background-color: var(--background-lightgrey);
 }
 
+@media screen and (min-width: 766px) {
+   nav img {
+      height: 420px !important;
+      border-radius: 12px;
+   }
+   .under-nav .button {
+      padding: 0.5rem 1rem;
+   }
+}
+
 main {
+   color: white !important;
    display: flex column;
    flex: 1;
-   margin: 2rem;
-   max-width: 600px;
+   /* margin: 2rem; */
+   /* padding: 2rem; */
+   max-width: 800px;
    div {
-      margin: 14rem 0;
+      margin: 8rem 0;
+      padding: 8rem 6rem;
+      background-color: var(--background-darkblue);
+      scroll-behavior: smooth;
    }
+}
+
+.dot-enter {
+   color: var(--background-darkblue);
 }
 
 /* Toggle Buttons */
@@ -76,16 +99,20 @@ main {
 }
 
 .button:hover {
-   background-color: var(--hover-blue);
+   background-color: var(--text-grey);
+   opacity: 85%;
 }
 
 /* Display Responsices */
 @media screen and (max-width: 768px) {
+   body {
+      background-color: black;
+   }
    nav {
       margin: 0;
       padding: 1rem 0;
       width: 100%;
-      height: 15%;
+      height: fit-content;
       background-color: var(--accenn-blue);
       color: var(--background-white);
       display: flex column;
@@ -120,5 +147,9 @@ main {
 
    main {
       margin: 0;
+      color: black;
+      div {
+         padding: 8rem 2rem;
+      }
    }
 }
