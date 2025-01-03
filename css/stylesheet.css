@@ -49,7 +49,7 @@ nav {
    height: 100%;
    top: 0;
    right: 0;
-   margin: 0 1em;
+   margin: 0 2rem;
    padding: 0 2rem;
    align-items: center;
    align-content: center;
@@ -153,6 +153,3 @@ main {
       }
    }
 }
-
-/* Footer */
-/* Prepairing for footer building */
